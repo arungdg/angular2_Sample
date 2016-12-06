@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <label>Location Name:</label> <input #placeName />
+        <button (click)="add(placeName.value); placeName.value=''">Add</button>
+    </div>
+    <ul class="places">
+        <li *ngFor="let place of places" [class.selected]="place === selectedPlace" (click)="onSelect(place)">
+            <span class="badge">{{place.id}}</span>
+            <span>{{place.name}}</span>
+            <button class="delete" (click)="delete(place); $event.stopPropagation()">x</button>
+        </li>
+    </ul>
+    <div *ngIf="selectedPlace">
+        <div class="newStyle">
+        <h3 style="color:grey;">
+            Name: {{selectedPlace.name | uppercase}}
+            <br>
+            ID: {{selectedPlace.id}}
+        </h3>
+        </div>
+    </div>
+</body>
+
+</html>
