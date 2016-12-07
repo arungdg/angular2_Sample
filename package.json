@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "angular2_Sample",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
@@ -9,7 +9,7 @@
   },
   "licenses": [
     {
-      "type": "Awnics Pvt. Ltd."
+      "type": "AWNICS"
     }
   ],
   "dependencies": {
